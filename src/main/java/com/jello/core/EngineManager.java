@@ -1,6 +1,7 @@
 package com.jello.core;
 
 import com.jello.test.Launcher;
+import com.jello.core.util.Constants;
 
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWErrorCallback;
@@ -17,7 +18,7 @@ public class EngineManager {
 	private WindowManager window;
 	private GLFWErrorCallback errorCallback;
 	 
-	private void init() throws Exception	{
+	private void init() throws Exception {
 		GLFW.glfwSetErrorCallback(errorCallback = GLFWErrorCallback.createPrint(System.err));
 		window = Launcher.getWindow();
 		window.init();
@@ -59,7 +60,7 @@ public class EngineManager {
 				
 				if(frameCounter >= NANOSECOND) {
 					setFps(frames);
-					window.setTitle("JELLO ENGINE FPS: " + getFps());
+					window.setTitle(Constants.TITLE + getFps());
 					frames = 0;
 					frameCounter = 0;
 				}

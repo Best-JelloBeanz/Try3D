@@ -1,20 +1,21 @@
 package com.jello.test;
 
 import com.jello.core.WindowManager;
-import org.lwjgl.Version;
+import com.jello.core.EngineManager;
 
 public class Launcher {
 	
 	private static WindowManager window;
-	
+	private static EngineManager engine;
+
 	public static void main(String[] args) {
-		System.out.println(Version.getVersion());
-		window = new WindowManager("JELLO ENGINE", 1600, 900, false);
-		
-		while(!window.windowSHouldClose()) {
-			window.update();
+		window = new WindowManager(Constants.TITLE, 1600, 900, false);
+		engine = new EngineManager();
+		try {
+
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
-		window.cleanup();
 	}
 	public static WindowManager getWindow() {
 		return window;

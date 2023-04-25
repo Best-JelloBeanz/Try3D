@@ -45,10 +45,10 @@ public class EngineManager {
 			long passedTime = startTime - lastTime;
 			lastTime = startTime;
 			
-			unprocessedTime += passedTime / (double)NANOSECOND;
+			unprocessedTime += passedTime / (double) NANOSECOND;
 			frameCounter += passedTime;
 			
-			//input
+			input();
 			
 			while(unprocessedTime > frametime) {
 				render = true;

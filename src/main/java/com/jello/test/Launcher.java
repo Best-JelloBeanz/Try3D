@@ -1,5 +1,6 @@
 package com.jello.test;
 
+import com.jello.core.utils.Constants;
 import com.jello.core.WindowManager;
 import com.jello.core.EngineManager;
 
@@ -12,7 +13,7 @@ public class Launcher {
 		window = new WindowManager(Constants.TITLE, 1600, 900, false);
 		engine = new EngineManager();
 		try {
-
+			engine.start();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

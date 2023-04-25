@@ -10,7 +10,6 @@ public class Launcher {
 	public static void main(String[] args) {
 		System.out.println(Version.getVersion());
 		window = new WindowManager("JELLO ENGINE", 1600, 900, false);
-		window.init();
 		
 		while(!window.windowSHouldClose()) {
 			window.update();

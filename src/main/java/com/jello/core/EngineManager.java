@@ -1,14 +1,14 @@
 package com.jello.core;
 
 import com.jello.test.Launcher;
-import com.jello.core.util.Constants;
+import com.jello.core.utils.Constants;
 
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWErrorCallback;
 
 public class EngineManager {
 	public static final long NANOSECOND = 1000000000L;
-	public static final FRAMERATE = 1000;
+	public static final float FRAMERATE = 1000;
 	 
 	private static int fps;
 	private static float frametime = 1.0f / FRAMERATE;
@@ -49,7 +49,7 @@ public class EngineManager {
 			lastTime = startTime;
 			
 			unprocessedTime += passedTime / (double) NANOSECOND;
-			frameCounter += passedTime;
+			framesCounter += passedTime;
 			
 			input();
 			
@@ -61,11 +61,11 @@ public class EngineManager {
 					stop();
 				}
 				
-				if(frameCounter >= NANOSECOND) {
+				if(framesCounter >= NANOSECOND) {
 					setFps(frames);
 					window.setTitle(Constants.TITLE + getFps());
 					frames = 0;
-					frameCounter = 0;
+					framesCounter = 0;
 				}
 			}
 			
@@ -104,12 +104,12 @@ public class EngineManager {
 		errorCallback.free();
 		GLFW.glfwTerminate();
 	}
-	
+
 	public static int getFps() {
 		return fps;
 	}
-	
-	public static void getFps() {
+
+	public static void setFps(int fps) {
 		EngineManager.fps = fps;
 	}
 }

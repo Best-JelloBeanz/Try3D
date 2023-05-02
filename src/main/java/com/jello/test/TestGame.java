@@ -3,6 +3,8 @@ package com.jello.test;
 import com.jello.core.ILogic;
 import com.jello.core.RenderManager;
 import com.jello.core.WindowManager;
+import org.lwjgl.glfw.GLFW;
+import org.lwjgl.opengl.GL11;
 
 public class TestGame implements ILogic {
 
@@ -19,7 +21,7 @@ public class TestGame implements ILogic {
 
     @Override
     public void init() throws Exception {
-        render.init();
+        renderer.init();
     }
 
     @Override

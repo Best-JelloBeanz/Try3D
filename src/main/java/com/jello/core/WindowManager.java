@@ -111,7 +111,7 @@ public class WindowManager {
     }
     
     public boolean windowShouldClose() {
-        return GLFW.glfwWindowSHouldClose(window);
+        return GLFW.glfwWindowShouldClose(window);
     }
     
     public String getTitle() {
@@ -123,6 +123,7 @@ public class WindowManager {
     }
     
     public boolean isvSync() {
+        return vSync;
     }
 
     public boolean isResize() {

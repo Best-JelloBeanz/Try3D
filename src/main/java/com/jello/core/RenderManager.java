@@ -1,13 +1,14 @@
 package com.jello.core;
 
 import com.jello.test.Launcher;
+import org.lwjgl.opengl.GL11;
 
 public class RenderManager {
 
-    private final WindowManagerwindow;
+    private final WindowManager window;
 
     public RenderManager() {
-        window = Launcher.getWindow;
+        window = Launcher.getWindow();
     }
 
     public void init() throws Exception {

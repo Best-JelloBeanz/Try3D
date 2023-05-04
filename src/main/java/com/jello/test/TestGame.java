@@ -3,6 +3,7 @@ package com.jello.test;
 import com.jello.core.ILogic;
 import com.jello.core.RenderManager;
 import com.jello.core.WindowManager;
+
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
 

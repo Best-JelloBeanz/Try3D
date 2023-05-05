@@ -4,8 +4,8 @@ import com.jello.core.ILogic;
 import com.jello.core.ObjectLoader;
 import com.jello.core.RenderManager;
 import com.jello.core.WindowManager;
-
 import com.jello.core.entity.Model;
+
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
 
@@ -31,12 +31,12 @@ public class TestGame implements ILogic {
         renderer.init();
 
         float[] vertices = {
-                -0.5f, 0.5f, 0f,
+                -0.5f, 0.5f, 0.0f,
                 -0.5f, -0.5f, 0f,
-                0.5f, -0.5f, 0f,
-                0.5f, -0.5f, 0f,
-                0.5f, 0.5f, 0f,
-                -0.5f, 0.5f, 0f
+                0.5f, -0.5f, 0.0f,
+                0.5f, -0.5f, 0.0f,
+                0.5f, 0.5f, 0.0f,
+                -0.5f, 0.5f, 0.0f
         };
 
         model = loader.loadModel(vertices);

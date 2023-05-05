@@ -141,11 +141,11 @@ public class WindowManager {
     public int getHeight() {
         return height;
     }
-    
+
     public long getWindow() {
         return window;
     }
-    
+
     public Matrix4f getProjectionMatrix() {
         return projectionMatrix;
     }

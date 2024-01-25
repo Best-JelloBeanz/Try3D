@@ -29,9 +29,10 @@ public class ShaderManager {
         }
         GL20.glShaderSource(shaderID, shaderCode);
         GL20.glCompileShader(shaderID);
+        System.out.println(shaderID);
 
         if(GL20.glGetShaderi(shaderID, GL20.GL_COMPILE_STATUS) == 0) {
-            throw new Exception("Error compiling shader code: TYPE:: " + shaderType);
+            throw new Exception("Error compiling shader code: TYPE: " + shaderType);
         }
         GL20.glAttachShader(programID, shaderID);
         return shaderID;
